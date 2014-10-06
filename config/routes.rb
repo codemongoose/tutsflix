@@ -13,7 +13,9 @@ Tutsflix::Application.routes.draw do
 
   #Following is for Instructors in Instructor name space
   namespace :instructor do
-    resources :courses, :only => [:new, :create, :show]
+    resources :courses, :only => [:new, :create, :show] do
+      resources :sections, :only => [:new, :create]
+    end
   end
   
   # Example of regular route:
