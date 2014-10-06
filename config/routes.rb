@@ -8,6 +8,10 @@ Tutsflix::Application.routes.draw do
   
   root 'static_pages#index'
 
+  #Following is for Student; not Instructors
+  resources :courses, :only => [:index, :show]
+
+  #Following is for Instructors in Instructor name space
   namespace :instructor do
     resources :courses, :only => [:new, :create, :show]
   end
