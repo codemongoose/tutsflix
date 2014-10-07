@@ -11,12 +11,27 @@ Tutsflix::Application.routes.draw do
   #Following is for Student; not Instructors
   resources :courses, :only => [:index, :show]
 
-  #Following is for Instructors in Instructor name space
   namespace :instructor do
+    
+    resources :sections, :only => [] do
+      resources :lessons, :only => [:new, :create]
+    end
+
     resources :courses, :only => [:new, :create, :show] do
       resources :sections, :only => [:new, :create]
     end
   end
+
+
+
+  #Following is for Instructors in Instructor name space
+  # namespace :instructor do
+  #   resources :courses, :only => [:new, :create, :show] do
+  #     resources :sections, :only => [:new, :create] do
+  #       resources :lessons, :only => [:new, :create]
+  #    end
+  #   end
+  # end
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
