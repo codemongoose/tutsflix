@@ -11,6 +11,9 @@ Tutsflix::Application.routes.draw do
   #Following is for Student; not Instructors
   resources :courses, :only => [:index, :show]
 
+  resources :lessons, :only => [:show]
+
+
   namespace :instructor do
     
     resources :sections, :only => [] do
