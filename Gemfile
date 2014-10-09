@@ -26,7 +26,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise', '>= 3.2.4'
 gem 'simple_form'
-
+gem 'carrierwave'
+gem "figaro", ">= 1.0.0"
+gem "fog", "~> 1.3.1"
 
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
