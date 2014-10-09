@@ -29,6 +29,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem "figaro", ">= 1.0.0"
 gem "fog", "~> 1.3.1"
+gem 'mini_magick'
 
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
