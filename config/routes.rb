@@ -9,7 +9,9 @@ Tutsflix::Application.routes.draw do
   root 'static_pages#index'
 
   #Following is for Student; not Instructors
-  resources :courses, :only => [:index, :show]
+  resources :courses, :only => [:index, :show] do
+    resources :enrollments, :only => :create
+  end
 
   resources :lessons, :only => [:show]
 
